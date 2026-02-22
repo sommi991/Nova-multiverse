@@ -2,44 +2,16 @@
   "name": "nova-multiverse",
   "version": "1.0.0",
   "description": "The Ultimate Multi-Niche React Template - 6 Complete SPAs in One",
-  "author": "Somto Richard",
+  "author": "Your Name",
   "license": "MIT",
   "private": false,
-  "homepage": "https://novamultiverse.netlify.app",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/sommi991/nova-multiverse"
-  },
-  "keywords": [
-    "react",
-    "typescript",
-    "vite",
-    "tailwindcss",
-    "admin-dashboard",
-    "ecommerce",
-    "crm",
-    "multipurpose",
-    "template",
-    "multiniche"
-  ],
-  "main": "dist/index.js",
-  "module": "dist/index.esm.js",
-  "types": "dist/index.d.ts",
-  "files": [
-    "dist",
-    "src",
-    "README.md",
-    "LICENSE"
-  ],
   "scripts": {
     "dev": "vite",
-    "build": "tsc --noEmit || true && vite build || true",
+    "build": "vite build",
     "preview": "vite preview",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "format": "prettier --write \"src/**/*.{ts,tsx}\"",
-    "type-check": "tsc --noEmit",
-    "test": "vitest",
-    "coverage": "vitest run --coverage"
+    "type-check": "tsc --noEmit"
   },
   "dependencies": {
     "react": "^18.3.0",
@@ -115,9 +87,5 @@
     "@testing-library/jest-dom": "^6.4.0",
     "@testing-library/user-event": "^14.5.0",
     "jsdom": "^23.0.0"
-  },
-  "engines": {
-    "node": ">=18.0.0",
-    "npm": ">=9.0.0"
   }
 }

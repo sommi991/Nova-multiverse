@@ -2,7 +2,7 @@
   "name": "nova-multiverse",
   "version": "1.0.0",
   "description": "The Ultimate Multi-Niche React Template - 6 Complete SPAs in One",
-  "author": "sommi991",
+  "author": "Your Name",
   "license": "MIT",
   "private": false,
   "homepage": "https://novamultiverse.com",
@@ -38,13 +38,8 @@
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "format": "prettier --write \"src/**/*.{ts,tsx}\"",
     "type-check": "tsc --noEmit",
-    "prepare": "husky install",
     "test": "vitest",
-    "coverage": "vitest run --coverage",
-    "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build",
-    "analyze": "vite build --mode analyze",
-    "deploy": "npm run build && npm publish"
+    "coverage": "vitest run --coverage"
   },
   "dependencies": {
     "react": "^18.3.0",
@@ -72,7 +67,6 @@
     "react-confetti": "^6.1.0",
     "react-use": "^17.5.0",
     "react-countup": "^6.5.0",
-    "react-spring": "^9.7.0",
     "@react-three/fiber": "^8.15.0",
     "@react-three/drei": "^9.92.0",
     "three": "^0.162.0",
@@ -105,15 +99,13 @@
     "vite": "^5.1.0",
     "vite-plugin-checker": "^0.6.0",
     "vite-plugin-compression": "^0.5.0",
-    "vite-plugin-analyzer": "^5.0.0",
+    "rollup-plugin-visualizer": "^5.12.0",
     "typescript": "^5.3.0",
     "eslint": "^8.56.0",
     "eslint-plugin-react": "^7.33.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-import": "^2.29.0",
     "prettier": "^3.2.0",
-    "husky": "^9.0.0",
-    "lint-staged": "^15.2.0",
     "tailwindcss": "^3.4.0",
     "autoprefixer": "^10.4.0",
     "postcss": "^8.4.0",
@@ -122,31 +114,7 @@
     "@testing-library/react": "^14.2.0",
     "@testing-library/jest-dom": "^6.4.0",
     "@testing-library/user-event": "^14.5.0",
-    "jsdom": "^23.0.0",
-    "@storybook/react": "^7.6.0",
-    "@storybook/addon-essentials": "^7.6.0",
-    "@storybook/addon-interactions": "^7.6.0",
-    "@storybook/addon-links": "^7.6.0",
-    "@storybook/blocks": "^7.6.0",
-    "storybook": "^7.6.0"
-  },
-  "lint-staged": {
-    "*.{js,jsx,ts,tsx}": [
-      "eslint --fix",
-      "prettier --write"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+    "jsdom": "^23.0.0"
   },
   "engines": {
     "node": ">=18.0.0",

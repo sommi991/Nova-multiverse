@@ -352,19 +352,23 @@ const NicheCard: React.FC<NicheCardProps> = ({ niche, index, onSelect, onPreview
 
           <div className="flex items-center space-x-3">
             <Touchable
-              onTap={(e) => {
+              onTap={(e: React.MouseEvent) => {
                 e.stopPropagation()
                 onSelect(niche.path)
               }}
               className="flex-1 py-3 rounded-xl text-white font-medium transition-all text-center"
-              style={{
-                background: `linear-gradient(135deg, ${niche.color.primary}, ${niche.color.secondary})`
-              }}
             >
-              Launch Niche
+              <div
+                className="w-full h-full flex items-center justify-center rounded-xl"
+                style={{
+                  background: `linear-gradient(135deg, ${niche.color.primary}, ${niche.color.secondary})`
+                }}
+              >
+                Launch Niche
+              </div>
             </Touchable>
             <Touchable
-              onTap={(e) => {
+              onTap={(e: React.MouseEvent) => {
                 e.stopPropagation()
                 onPreview(niche)
               }}
@@ -390,8 +394,6 @@ interface PreviewModalProps {
 }
 
 const PreviewModal: React.FC<PreviewModalProps> = ({ niche, isOpen, onClose, onSelect }) => {
-  const [currentImage, setCurrentImage] = useState(0)
-
   if (!niche || !isOpen) return null
 
   return (
@@ -427,14 +429,6 @@ const PreviewModal: React.FC<PreviewModalProps> = ({ niche, isOpen, onClose, onS
           <Touchable onTap={onClose} className="p-2 hover:bg-dark-hover rounded-lg">
             <X className="w-5 h-5 text-gray-400" />
           </Touchable>
-        </div>
-
-        <div className="relative h-64 rounded-xl overflow-hidden mb-6">
-          <img
-            src={niche.galleryImages[currentImage]}
-            alt={`${niche.name} preview`}
-            className="w-full h-full object-cover"
-          />
         </div>
 
         <p className="text-gray-300 mb-6">{niche.longDescription}</p>
@@ -479,11 +473,15 @@ const PreviewModal: React.FC<PreviewModalProps> = ({ niche, isOpen, onClose, onS
               onClose()
             }}
             className="px-6 py-3 text-white rounded-xl"
-            style={{
-              background: `linear-gradient(135deg, ${niche.color.primary}, ${niche.color.secondary})`
-            }}
           >
-            Launch {niche.name}
+            <div
+              className="w-full h-full flex items-center justify-center rounded-xl px-6 py-3"
+              style={{
+                background: `linear-gradient(135deg, ${niche.color.primary}, ${niche.color.secondary})`
+              }}
+            >
+              Launch {niche.name}
+            </div>
           </Touchable>
         </div>
       </motion.div>

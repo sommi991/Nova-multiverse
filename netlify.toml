@@ -1,6 +1,10 @@
 [build]
-  command = "npm run build"
+  command = "rm -rf node_modules package-lock.json dist && npm install && npm run build"
   publish = "dist"
+
+[build.environment]
+  CI = "false"
+  NODE_VERSION = "18"
 
 [[redirects]]
   from = "/*"
